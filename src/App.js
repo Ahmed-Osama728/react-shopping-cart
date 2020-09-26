@@ -1,15 +1,15 @@
-import React from 'react';
-import Products from './components/layOut/product';
-import data from './data.json';
+import React from "react";
+import data from "./data.json";
+import Products from "./components/layOut/product";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       products: data.products,
-      size: '',
-      sort: ''
-    }
+      size: "",
+      sort: "",
+    };
   }
   render() {
     return (

@@ -13,6 +13,7 @@ class App extends React.Component {
   }
   render() {
     return (
+
       <div className="grid-container">
         <header>
           <a href="/">React Shopping Cart</a>

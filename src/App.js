@@ -1,19 +1,34 @@
 import React from 'react';
-import Footer from './components/layOut/footer';
-import Navbar from './components/layOut/navbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { HashRouter as Router } from 'react-router-dom';
+import Products from './components/layOut/product';
+import data from './data.json';
 
-function App() {
-  return (
-    <Router>
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      products: data.products,
+      size: '',
+      sort: ''
+    }
+  }
+  render() {
+    return (
       <div className="grid-container">
-        <Navbar />
-        <main>Product List</main>
-        <Footer />
+        <header>
+          <a href="/">React Shopping Cart</a>
+        </header>
+        <main>
+          <div className="content">
+            <div className="main">
+              <Products products={this.state.products}></Products>
+            </div>
+            <div className="sidebar">Cart Items</div>
+          </div>
+        </main>
+        <footer>All right is reserved.</footer>
       </div>
-    </Router>
-  );
+    );
+  }
 }
 
 export default App;

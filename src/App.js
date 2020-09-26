@@ -3,7 +3,7 @@ import Footer from './components/layOut/footer';
 import Navbar from './components/layOut/navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter as Router } from 'react-router-dom';
-
+// feature 1
 function App() {
   return (
     <Router>
